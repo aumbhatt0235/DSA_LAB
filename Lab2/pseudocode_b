@@ -1,0 +1,52 @@
+Algorithm stackSize()
+    Input: none
+    Output: return number of elements in stack
+    return top+1
+
+---------------------------
+
+Algorithm stackTop()
+    Input: none
+    Output: return the top-most element in the stack
+    return stack[top]
+
+---------------------------
+
+Algorithm isEmpty()
+    Input: none
+    Output: if stack is empty return 1 else return 0
+    if top = -1
+        return 1
+    else
+        return 0
+
+---------------------------
+
+Algorithm isFull()
+    Input: none
+    Output: if stack is full then return 1 else return 0
+    if top = stackSize()-1
+        return 1
+    else
+    return 0
+
+---------------------------
+
+Algorithm push(x)
+    Input: 'x' is the element to be pushed into the stack
+    Output: if stack is not full then push 'x' into the stack else return -1
+    if isFull() = 0
+        top <- top + 1
+        stack[top] <- x
+
+---------------------------
+
+Algorithm pop()
+    Input: none
+    Output: if stack is not empty then pop top-most element from the stack and return that element to invoking function else return -1
+    if isEmpty() = 0
+        data <- stack[top]
+        top <- top - 1
+        return data
+    else
+        return -1
